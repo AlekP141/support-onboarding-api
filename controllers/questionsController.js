@@ -10,11 +10,11 @@ const getAllQuestions = (req, res) => {
 };
 
 const getQuestion = (req, res) => {
-  const question = data.questions.find((q) => q.indexName === req.body.index);
+  const question = data.questions.find((q) => q.indexName === req.params.index);
   if (!question) {
     return res
       .status(400)
-      .json({ message: `question index ${req.body.index} not found` });
+      .json({ message: `question index ${req.params.index} not found` });
   }
   res.status(201).json(question);
 };

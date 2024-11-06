@@ -12,11 +12,11 @@ const getAllAnswers = (req, res) => {
 };
 
 const getAnswer = (req, res) => {
-  const answer = data.find((answer) => answer.key === req.body.index);
+  const answer = data.find((answer) => answer.key === req.params.index);
   if (!answer) {
     return res
       .status(400)
-      .json({ message: `question index ${req.body.index} not found` });
+      .json({ message: `question index ${req.params.index} not found` });
   }
   res.status(201).json(answer);
 };
