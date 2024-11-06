@@ -10,7 +10,7 @@ const getAllQuestions = (req, res) => {
 };
 
 const getQuestion = (req, res) => {
-  const question = data.questions.find((q) => q.index === req.body.index);
+  const question = data.questions.find((q) => q.indexName === req.body.index);
   if (!question) {
     return res
       .status(400)

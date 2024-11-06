@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.use("/questions", require("./routes/api/questions"));
-// app.use("/answers", require("./routes/api/userAnswers"));
+app.use("/answers", require("./routes/api/userAnswers"));
 
 app.all("*", (req, res) => {
   res.status(404);
