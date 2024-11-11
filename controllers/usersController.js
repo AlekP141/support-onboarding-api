@@ -34,12 +34,13 @@ const createUser = async (req, res) => {
   try {
     const filePath = path.join(__dirname, "..", "models", "userAnswers.json");
     const fileData = await fsPromises.readFile(filePath, "utf-8");
+    
     // fsPromises doesnt work with JSON so you need to parse it first
     const usersArray = JSON.parse(fileData);
 
     usersArray.push(newUser);
 
-    // fsPromises doesnt work with JSON so you need to parse it first
+    // fsPromises doesnt work with JSON so it needs to be stringified
     await fsPromises.writeFile(filePath, JSON.stringify(usersArray, null, 1));
 
     data.setUserAnswers(usersArray);
