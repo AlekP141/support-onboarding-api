@@ -5,10 +5,8 @@ const data = {
   },
 };
 
-const userAnswers = require("../models/userAnswers.json");
-
 const getAllAnswers = (req, res) => {
-  res.json({ userAnswers });
+  res.json( data.userAnswers );
 };
 
 const getAnswer = (req, res) => {

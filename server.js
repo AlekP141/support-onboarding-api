@@ -16,6 +16,7 @@ app.use(express.json());
 
 app.use("/questions", require("./routes/api/questions"));
 app.use("/answers", require("./routes/api/userAnswers"));
+app.use("/users", require("./routes/api/users"));
 
 app.all("*", (req, res) => {
   res.status(404);
