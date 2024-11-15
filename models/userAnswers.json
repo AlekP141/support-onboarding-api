@@ -16,8 +16,26 @@
         {
           "sender": "support",
           "text": "syn-1 content"
+        },
+        {
+          "sender": "support-internal",
+          "text": "internal test"
+        },
+        {
+          "sender": "support",
+          "text": "123123"
+        },
+        {
+          "sender": "hint",
+          "text": "hint test 1.1"
+        },
+        {
+          "sender": "support",
+          "text": "asdasdads"
         }
-      ]
+      ],
+      "synonyms-2":[],
+      "rules-1": []
     }
   },
   {
