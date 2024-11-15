@@ -1,20 +1,52 @@
 [
-  {
-    "id": 1,
-    "user": "Test User",
-    "answers": {
-      "synonyms-1": ["syn-1 content"],
-      "synonyms-2": ["syn-2 content", "2nd message syn-2"],
-      "rules-1": ["rules-1 content"]
-    }
-  },
-  {
-    "id": 2,
-    "user": "Test User 2",
-    "answers": {
-      "synonyms-1": ["syn-1 content 2"],
-      "synonyms-2": ["syn-2 content 2", "2nd message syn-2 2"],
-      "rules-1": ["rules-1 content 2"]
-    }
+ {
+  "id": 0,
+  "user": "",
+  "answers": {
+   "synonyms-1": [],
+   "synonyms-2": [],
+   "rules-1": []
   }
+ },
+ {
+  "id": 1,
+  "user": "Test User",
+  "answers": {
+   "synonyms-1": [
+    "syn-1 content"
+   ],
+   "synonyms-2": [
+    "syn-2 content",
+    "2nd message syn-2"
+   ],
+   "rules-1": [
+    "rules-1 content"
+   ]
+  }
+ },
+ {
+  "id": 2,
+  "user": "Test User 2",
+  "answers": {
+   "synonyms-1": [
+    "syn-1 content 2"
+   ],
+   "synonyms-2": [
+    "syn-2 content 2",
+    "2nd message syn-2 2"
+   ],
+   "rules-1": [
+    "rules-1 content 2"
+   ]
+  }
+ },
+ {
+  "id": 3,
+  "user": "asd",
+  "answers": {
+   "synonyms-1": [],
+   "synonyms-2": [],
+   "rules-1": []
+  }
+ }
 ]

@@ -18,6 +18,15 @@ const getAllUsers = (req, res) => {
 
 const createUser = async (req, res) => {
   const user = req.body.name;
+  
+  const isDuplicate = data.userAnswers.some(
+    (userAnswer) => userAnswer.user.toLowerCase() === user.toLowerCase()
+  );
+
+  if (isDuplicate) {
+    return res.status(409).json({ message: "User name already exists" });
+  }
+
   const questionData = require("../models/questions.json");
   const questionList = questionData.map((question) => question.indexName);
 
@@ -34,7 +43,7 @@ const createUser = async (req, res) => {
   try {
     const filePath = path.join(__dirname, "..", "models", "userAnswers.json");
     const fileData = await fsPromises.readFile(filePath, "utf-8");
-    
+
     // fsPromises doesnt work with JSON so you need to parse it first
     const usersArray = JSON.parse(fileData);
 
